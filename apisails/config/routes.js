@@ -8,6 +8,8 @@
  * https://sailsjs.com/anatomy/config/routes-js
  */
 
+const Users = require("../api/models/Users");
+
 module.exports.routes = {
 
   /***************************************************************************
@@ -21,6 +23,19 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+      'GET /users': 'UserController.getAllUsers',
+      'POST /users': 'UserController.post',
+      'PUT /users': 'UserController.put',
+      'DELETE /users': 'UserController.delete',
+
+
+      'GET /articulos' : 'ArticulosController.getAllArticulos',
+      'POST /articulos': 'ArticulosController.post',
+      'PUT /articulos': 'ArticulosController.put',
+      'DELETE /articulos': 'ArticulosController.delete',
+
+
+      
 
   /***************************************************************************
   *                                                                          *
